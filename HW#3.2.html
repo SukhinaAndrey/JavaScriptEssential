@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+ 		<title></title>
+	</head>
+	<body>
+		<script>
+			var A=[11, 4, 7,-22, -5, 2, 14, -17, -8, 1, 29,14];
+			var Nechet = [];
+			var Chet = [];
+			var Sorted = [];
+			for(var i=0;i<A.length;i++){
+				if(A[i]%2!=0){
+					Nechet[i] = A[i];
+				}
+				else{
+					Chet[i]=A[i];
+				}
+			}
+			for(var i=0;i<Nechet.length;i++){
+				if(Nechet[i]==null || Nechet[i]==undefined){
+					Nechet.splice(i,1);
+				}
+			}
+			Nechet.sort(function(x,y){
+				return x-y;
+			});
+			for(var i=0;i<Chet.length;i++){
+				if(Chet[i]==null || Chet[i]==undefined){
+					Chet.splice(i,1);
+				}
+			}
+			Chet.sort(function(x,y){
+				return y-x;
+			});
+			Sorted.push(Nechet);
+			Sorted.push(Chet);
+			document.write(Sorted+"&nbsp;");
+		</script>
+	</body>
+</html>
