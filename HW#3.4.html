@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+ 		<title></title>
+	</head>
+	<body>
+		<script>
+			var A =[1,22,14,5,75,83,96, 60, 100, 32];
+			document.write(A);
+			document.write("<br/>");
+			var index1 = +prompt("Введите индекс числа, которого вы хотите вырезать: ");
+			var index2 = +prompt("Введите индекс числа, вместо которого вы хотите вставить первое число: ");
+			var number = A.splice(index1, 1);
+			A.splice(index2,1, number);
+			document.write(A);
+		</script>
+	</body>
+</html>
