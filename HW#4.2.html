@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+ 		<title></title>
+	</head>
+	<body>
+		<script>
+			var number1 = +prompt("Введите число №1:");
+			var number2 = +prompt("Введите число №2:");
+			var sign = prompt("Введите знак операции:");
+			function add(){
+				document.write(number1+number2);
+			}
+			function sub(){
+				document.write(number1-number2);
+			}
+			function mul(){
+				document.write(number1*number2);
+			}
+			function div(){
+				if(number2==0){
+					alert("Error 404");
+				}
+				document.write(number1/number2);
+			}
+			switch(sign){
+				case"+":{
+					add();
+					break;
+				}
+				case"-":{
+					sub();
+					break;
+				}
+				case"*":{
+					mul();
+					break;
+				}
+				case"/":{
+					div();
+					break;
+				}
+				default:{
+					alert("Неверный выбор!!!");
+				}
+			}
+		</script>
+	</body>
+</html>

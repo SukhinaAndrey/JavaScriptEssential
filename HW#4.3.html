@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+ 		<title></title>
+	</head>
+	<body>
+		<script>
+			var number = +prompt("Введите целое число:");
+			function number1(){
+				if(number>=0){
+					document.write("Число "+ number+" положительное.");
+					document.write("<br/>");
+				}
+				else{
+					document.write("Число "+ number+" отрицательное.");
+					document.write("<br/>");
+				}
+			}
+			function number2(){
+				if(number>1 && number<=3){
+					document.write("Число "+ number+" простое.");
+					document.write("<br/>");
+				}
+				else if( number>1 && number%2!=0 && number%3!=0){
+					document.write("Число "+ number+" простое.");
+					document.write("<br/>");
+				}
+				else{
+					document.write("Число "+ number+" не простое.");
+					document.write("<br/>");
+				}
+			}
+			function number3(){
+				if(number%2==0){
+					document.write("Число "+ number+" делится на 2 без остатка");
+					document.write("<br/>");
+				}
+				else if(number%3==0){
+					document.write("Число "+ number+" делится на 3 без остатка");
+					document.write("<br/>");
+				}
+				else if(number%5==0){
+					document.write("Число "+ number+" делится на 5 без остатка");
+					document.write("<br/>");
+				}
+				else if(number%6==0){
+					document.write("Число "+ number+" делится на 6 без остатка");
+					document.write("<br/>");
+				}
+				else if(number%9==0){
+					document.write("Число "+ number+" делится на 9 без остатка");
+					document.write("<br/>");
+				}
+				else{
+					document.write("Число "+ number+" не делится на 2, 3, 5, 6, 9 без остатка");
+					document.write("<br/>");
+				}
+			}
+			number1();
+			number2();
+			number3();
+		</script>
+	</body>
+</html>
