@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+ 		<title></title>
+	</head>
+	<body>
+		<script>
+			function travell(colOfpeople, colOfdays, country){
+				var priceFordayEgypt = 110;
+				var priceFordayBulgaria = 100;
+				var priceFordayTurkey = 120;
+				var sum;
+				function days(){
+					if(colOfdays === null || colOfdays === undefined){
+						colOfdays = 7;
+					}
+					else if(colOfdays>10){
+						priceFordayEgypt=priceFordayEgypt*0.9;
+						priceFordayBulgaria = priceFordayBulgaria*0.9;
+						priceFordayTurkey = priceFordayTurkey*0.9;
+					}
+					else if(colOfdays<5){
+						alert("Нельзя брать путевку меньше чем на 5 дней!!!");
+					}
+					else{
+						priceFordayEgypt=priceFordayEgypt;
+						priceFordayBulgaria = priceFordayBulgaria;
+						priceFordayTurkey = priceFordayTurkey;
+					}
+				}
+
+				days();
+
+				function people(){
+					if(colOfpeople==0){
+						alert("Нельзя брать путевку на 0 человек!!!");
+					}
+				}
+
+				people();
+
+				function countryQ(){
+					if(country=="Egypt" || country=="Египет"){
+						sum = priceFordayEgypt * colOfpeople * colOfdays;
+					}
+					else if(country=="Bulgaria" || country=="Болгария"){
+						sum = priceFordayBulgaria * colOfpeople * colOfdays;
+					}
+					else if(country=="Turkey" || country=="Турция"){
+						sum = priceFordayTurkey * colOfpeople * colOfdays;
+					}
+				}
+
+				countryQ();
+
+				document.write("Цена за "+colOfpeople+" на "+colOfdays +" дней(дня) в "+ country+ " равна  "+sum);
+				}
+				travell(2, 11, "Турция");
+		</script>
+	</body>
+</html>
